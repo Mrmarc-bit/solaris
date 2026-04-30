@@ -1,0 +1,6 @@
+{
+  "name": "Solar System AR-Exploration",
+  "description": "An interactive, web-based AR solar system exploration app with real-time orbits, planet interactions, and exploded views.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": []
+}

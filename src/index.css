@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  margin: 0;
+}
+
+/* Range input styling */
+input[type="range"] {
+  height: 4px;
+  -webkit-appearance: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 5px;
+  background-image: linear-gradient(to right, white, white);
+  background-repeat: no-repeat;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+
+@layer utilities {
+  .hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* AR Button Overrides */
+#ARButton-custom {
+  bottom: 40px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  background: rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  border-radius: 30px !important;
+  padding: 16px 32px !important;
+  font-family: var(--font-sans) !important;
+  font-weight: 700 !important;
+  font-size: 14px !important;
+  letter-spacing: 2px !important;
+  color: white !important;
+  text-transform: uppercase !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(255, 255, 255, 0.05) !important;
+  transition: all 0.3s ease !important;
+  width: auto !important;
+  min-width: 200px !important;
+  text-align: center !important;
+}
+
+#ARButton-custom:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  transform: translateX(-50%) scale(1.05) !important;
+}
